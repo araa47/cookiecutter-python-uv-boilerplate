@@ -1,6 +1,6 @@
 ---
 default_language_version:
-    python: {{cookiecutter.python_executable: null}: null}
+    python: {{ cookiecutter.python_executable }}
 default_stages: [commit, push]
 repos:
     - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -19,12 +19,10 @@ repos:
       hooks:
           - id: yamllint
             args: [--format, parsable]
-            exclude: ^(kubernetes/downloader/manifest.yaml)$
     - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
       rev: 0.2.3
       hooks:
           - id: yamlfmt
-            exclude: ^(kubernetes/(listener|downloader|legacy_streamer)/manifest\.yaml|\.github/workflows/cron-data-quality\.yml|\.github/workflows/cron-repair\.yml)$
     - repo: https://github.com/psf/black
       rev: 24.8.0
       hooks:
