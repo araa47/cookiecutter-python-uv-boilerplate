@@ -75,14 +75,12 @@ wheels = [
 name = "py-uv-boilerplate"
 version = "0.1.0"
 source = { virtual = "." }
-
-[package.optional-dependencies]
-dev = [
+dependencies = [
     { name = "pre-commit" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "pre-commit", marker = "extra == 'dev'", specifier = ">=3.3.3" }]
+requires-dist = [{ name = "pre-commit", specifier = ">=3.3.3" }]
 
 [[package]]
 name = "pyyaml"

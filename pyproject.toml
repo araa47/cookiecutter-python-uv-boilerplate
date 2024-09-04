@@ -5,13 +5,9 @@ description = "A cookiecutter template for a Python project using uv."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-
-]
-
-[project.optional-dependencies]
-dev = [
     "pre-commit>=3.3.3",
 ]
+
 
 [tool.pyright]
 typeCheckingMode = "strict"
