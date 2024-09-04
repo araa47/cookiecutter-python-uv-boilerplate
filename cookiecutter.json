@@ -1,0 +1,12 @@
+{
+    "project_name": "Python UV Boilerplate",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "project_short_description": "Python UV Boilerplate contains all the boilerplate you need to create a Python repo",
+    "version": "0.1.0",
+
+    "python_version": "3.12.5",
+    "python_executable": "python{{ cookiecutter.python_version.rsplit('.', 1)[0] }}",
+    "python_major_minor_version": "{{ cookiecutter.python_version.rsplit('.', 1)[0] }}",
+
+    "author": "Anonymous"
+  }

@@ -1,0 +1,26 @@
+[project]
+name = "py-uv-boilerplate"
+version = "0.1.0"
+description = "A cookiecutter template for a Python project using uv."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=3.3.3",
+]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+venvPath = "."
+venv = ".venv"
+
+[tool.isort]
+profile = "black"
+src_paths = "tests"
+line_length = 80
+include_trailing_comma = true
+multi_line_output = 3

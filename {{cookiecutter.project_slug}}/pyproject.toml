@@ -1,0 +1,40 @@
+[project]
+name = "{{cookiecutter.project_slug}}"
+version = "{{cookiecutter.version}}"
+description = "{{cookiecutter.project_short_description}}"
+readme = "README.md"
+requires-python = ">={{ cookiecutter.python_major_minor_version }}"
+dependencies = [
+
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.6.3",
+    "pre-commit>=3.3.3",
+    "pytest",
+    "pytest-asyncio<0.23",
+    "pytest-cov",
+]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+venvPath = "."
+venv = ".venv"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.isort]
+profile = "black"
+src_paths = "tests"
+line_length = 80
+include_trailing_comma = true
+multi_line_output = 3
+
+[tool.ruff]
+select = ["E", "F", "B"]
+exclude = ["__pycache__", "terraform", ".git", ".venv"]
+ignore = ["E501"]
