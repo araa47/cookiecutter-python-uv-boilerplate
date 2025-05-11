@@ -1,7 +1,7 @@
 ---
 default_language_version:
     python: {{ cookiecutter.python_executable }}
-default_stages: [commit, push]
+default_stages: [pre-commit, pre-push]
 repos:
     - repo: https://github.com/pre-commit/pre-commit-hooks
       rev: v5.0.0
@@ -15,7 +15,7 @@ repos:
           - id: mixed-line-ending
           - id: trailing-whitespace
     - repo: https://github.com/adrienverge/yamllint.git
-      rev: v1.35.1
+      rev: v1.37.1
       hooks:
           - id: yamllint
             args: [--format, parsable]
@@ -33,12 +33,12 @@ repos:
             language_version: python3
             args: [-t, py311]
     - repo: https://github.com/pycqa/isort
-      rev: 6.0.0
+      rev: 6.0.1
       hooks:
           - id: isort
             name: isort (python)
     - repo: https://github.com/RobertCraigie/pyright-python
-      rev: v1.1.393
+      rev: v1.1.400
       hooks:
           - id: pyright
             entry: pyright
@@ -53,13 +53,13 @@ repos:
             types: [text]
 
     - repo: https://github.com/astral-sh/ruff-pre-commit
-      rev: v0.9.6
+      rev: v0.11.9
       hooks:
           - id: ruff
             args: [--fix, --exit-non-zero-on-fix]
 
     - repo: https://github.com/antonbabenko/pre-commit-terraform
-      rev: v1.97.3
+      rev: v1.99.0
       hooks:
           - id: terraform_fmt
             args:
