@@ -3,6 +3,11 @@ default_language_version:
     python: python3.13
 default_stages: [pre-commit, pre-push]
 repos:
+    - repo: https://github.com/astral-sh/uv-pre-commit
+      # uv version.
+      rev: 0.7.6
+      hooks:
+          - id: uv-lock
     - repo: https://github.com/pre-commit/pre-commit-hooks
       rev: v5.0.0
       hooks:
