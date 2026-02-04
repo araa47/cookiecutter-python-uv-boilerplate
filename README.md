@@ -27,7 +27,7 @@ This project is a cookiecutter template for a Python project using uv.
 
 2. **Dependency Management**: [uv](https://github.com/astral-sh/uv) for managing Python versions and dependencies, replacing pyenv and poetry.
 
-3. **Code Quality**: [pre-commit](https://pre-commit.com/) for managing pre-commit hooks. See [.pre-commit-config.yaml]({{cookiecutter.project_slug}}/.pre-commit-config.yaml) for configured hooks.
+3. **Code Quality**: [prek](https://github.com/astral-sh/prek) for managing pre-commit hooks (a faster Rust-based alternative to pre-commit). See [.pre-commit-config.yaml]({{cookiecutter.project_slug}}/.pre-commit-config.yaml) for configured hooks.
 
 4. **Testing**: [pytest](https://docs.pytest.org/) for writing and running tests.
 
