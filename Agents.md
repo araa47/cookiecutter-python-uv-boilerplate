@@ -22,7 +22,7 @@ This document outlines best practices and required conventions for developing in
 - **Python Version:** Use Python 3.12+.
 - **Type Annotations:**
   - Always use standard Python types (e.g., `list`, `dict`, not `List`, `Dict`).
-  - Ensure all functions and variables are type-annotated for Pyright compatibility.
+  - Ensure all functions and variables are type-annotated for `ty` type checking.
 - **Database:**
   - Assume ClickHouse as the default database.
   - Use the `clickhouse_connect` library for all ClickHouse interactions.
