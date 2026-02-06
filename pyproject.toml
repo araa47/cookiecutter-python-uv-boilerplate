@@ -11,13 +11,8 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest",
+    "ty>=0.0.15",
 ]
-
-
-[tool.pyright]
-typeCheckingMode = "strict"
-venvPath = "."
-venv = ".venv"
 
 [tool.isort]
 profile = "black"

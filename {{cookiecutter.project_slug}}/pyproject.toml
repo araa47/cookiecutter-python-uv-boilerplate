@@ -15,12 +15,8 @@ dev = [
     "pytest",
     "pytest-asyncio<0.23",
     "pytest-cov",
+    "ty>=0.0.15",
 ]
-
-[tool.pyright]
-typeCheckingMode = "strict"
-venvPath = "."
-venv = ".venv"
 
 [tool.pytest.ini_options]
 filterwarnings = [

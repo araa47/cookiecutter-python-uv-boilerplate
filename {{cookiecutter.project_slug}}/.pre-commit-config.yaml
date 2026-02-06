@@ -40,11 +40,13 @@ repos:
       hooks:
           - id: isort
             name: isort (python)
-    - repo: https://github.com/RobertCraigie/pyright-python
-      rev: v1.1.408
+    - repo: local
       hooks:
-          - id: pyright
-            entry: pyright
+          - id: ty
+            name: ty
+            entry: uv run ty check
+            language: system
+            types: [python]
     - repo: https://github.com/codespell-project/codespell
       rev: v2.4.1
       hooks:
