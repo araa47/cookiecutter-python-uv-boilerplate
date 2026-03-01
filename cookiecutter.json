@@ -4,7 +4,7 @@
     "project_short_description": "Python UV Boilerplate contains all the boilerplate you need to create a Python repo",
     "version": "0.1.0",
 
-    "python_version": "3.13.2",
+    "python_version": "3.13.12",
     "python_executable": "python{{ cookiecutter.python_version.rsplit('.', 1)[0] }}",
     "python_major_minor_version": "{{ cookiecutter.python_version.rsplit('.', 1)[0] }}",
 
