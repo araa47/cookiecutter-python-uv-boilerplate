@@ -5,7 +5,7 @@ default_stages: [pre-commit, pre-push]
 repos:
     - repo: https://github.com/astral-sh/uv-pre-commit
       # uv version.
-      rev: 0.9.29
+      rev: 0.10.7
       hooks:
           - id: uv-lock
     - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -38,7 +38,7 @@ repos:
             language_version: python3
             args: [-t, py311]
     - repo: https://github.com/pycqa/isort
-      rev: 7.0.0
+      rev: 8.0.1
       hooks:
           - id: isort
             name: isort (python)
