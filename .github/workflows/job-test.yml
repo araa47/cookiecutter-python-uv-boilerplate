@@ -28,4 +28,12 @@ jobs:
 
             - name: Run Tests
               run: |
-                  uv run pytest {{cookiecutter.project_slug}}/tests
+                  uv run pytest --cov --cov-report=term-missing --cov-report=json:coverage.json "{{cookiecutter.project_slug}}/tests"
+
+            - name: Upload coverage report
+              if: always()
+              uses: actions/upload-artifact@v4
+              with:
+                  name: coverage-report
+                  path: coverage.json
+                  retention-days: 5

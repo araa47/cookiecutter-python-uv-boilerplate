@@ -19,3 +19,16 @@ jobs:
         permissions:
             contents: read
             id-token: write
+
+    save-pr-number:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Save PR number
+              run: echo "${{ github.event.pull_request.number }}" > pr_number.txt
+
+            - name: Upload PR number
+              uses: actions/upload-artifact@v4
+              with:
+                  name: pr-number
+                  path: pr_number.txt
+                  retention-days: 5
