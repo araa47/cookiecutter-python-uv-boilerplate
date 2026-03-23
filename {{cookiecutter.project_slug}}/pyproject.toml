@@ -23,6 +23,12 @@ filterwarnings = [
     "ignore::DeprecationWarning",
 ]
 
+[tool.coverage.run]
+source = ["{{cookiecutter.project_slug}}"]
+
+[tool.coverage.report]
+show_missing = true
+
 [tool.isort]
 profile = "black"
 src_paths = "tests"

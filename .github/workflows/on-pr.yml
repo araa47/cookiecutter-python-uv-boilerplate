@@ -19,3 +19,9 @@ jobs:
         permissions:
             contents: read
             id-token: write
+
+    coverage-comment:
+        needs: test
+        uses: ./.github/workflows/job-coverage-comment.yml
+        permissions:
+            pull-requests: write
