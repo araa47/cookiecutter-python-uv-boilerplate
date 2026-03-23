@@ -24,10 +24,13 @@ filterwarnings = [
 ]
 
 [tool.coverage.run]
-source = ["{{cookiecutter.project_slug}}"]
+omit = ["*/tests/*"]
 
 [tool.coverage.report]
 show_missing = true
+exclude_lines = [
+    "if __name__ == .__main__.",
+]
 
 [tool.isort]
 profile = "black"
