@@ -5,7 +5,7 @@ default_stages: [pre-commit, pre-push]
 repos:
     - repo: https://github.com/astral-sh/uv-pre-commit
       # uv version.
-      rev: 0.10.7
+      rev: 0.10.12
       hooks:
           - id: uv-lock
     - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -32,7 +32,7 @@ repos:
           - id: yamlfmt
             exclude: ^{{cookiecutter.project_slug}}/.pre-commit-config.yaml$
     - repo: https://github.com/psf/black
-      rev: 26.1.0
+      rev: 26.3.1
       hooks:
           - id: black
             language_version: python3
@@ -50,7 +50,7 @@ repos:
             language: system
             types: [python]
     - repo: https://github.com/codespell-project/codespell
-      rev: v2.4.1
+      rev: v2.4.2
       hooks:
           - id: codespell
             name: codespell
