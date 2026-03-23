@@ -23,6 +23,15 @@ filterwarnings = [
     "ignore::DeprecationWarning",
 ]
 
+[tool.coverage.run]
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    "if __name__ == .__main__.",
+]
+
 [tool.isort]
 profile = "black"
 src_paths = "tests"

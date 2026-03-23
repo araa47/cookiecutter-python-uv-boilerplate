@@ -11,6 +11,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest",
+    "pytest-cov>=7.1.0",
     "ty>=0.0.19",
 ]
 
@@ -20,3 +21,13 @@ src_paths = "tests"
 line_length = 80
 include_trailing_comma = true
 multi_line_output = 3
+
+[tool.coverage.run]
+source = ["{{cookiecutter.project_slug}}"]
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    "if __name__ == .__main__.",
+]
