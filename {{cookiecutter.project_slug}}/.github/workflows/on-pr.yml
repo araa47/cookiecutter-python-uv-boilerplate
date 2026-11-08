@@ -18,7 +18,6 @@ jobs:
         uses: ./.github/workflows/job-test.yml
         permissions:
             contents: read
-            id-token: write
 
     coverage-comment:
         needs: test

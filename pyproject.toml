@@ -5,14 +5,14 @@ description = "A cookiecutter template for a Python project using uv."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "prek>=0.4.8",
+    "prek>=0.5.9",
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest",
     "pytest-cov>=7.1.0",
-    "ty>=0.0.56",
+    "ty>=0.0.95",
 ]
 
 [tool.isort]
